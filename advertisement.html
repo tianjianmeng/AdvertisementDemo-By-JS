@@ -30,12 +30,12 @@
 		window.onload = function fun1(){
 			let pics = document.getElementsByTagName('img');
 			let spans = document.getElementsByTagName('span');
-			for(var i = 0;i < spans.length;i++)
+			for(let i = 0;i < spans.length;i++)
 			{
-				(function(i) {
+				
 					pics[i].style.display = 'none';
 					spans[i].style.display = 'none';
-					})(i);
+					
 			}
 		}
 		function showAds(){
@@ -43,13 +43,13 @@
 				let pics = document.getElementsByTagName('img');
 		        let spans = document.getElementsByTagName('span');
 				let count = 5;
-				for(var i = 0;i < spans.length;i++)
+				for(let i = 0;i < spans.length;i++)
 				{
-					(function(i) {
+					
 						spans[i].innerText = count;
 						pics[i].style.display = 'block';
 						spans[i].style.display = 'block';
-						})(i);
+						
 				}
 				
 				// function startCount(){
@@ -85,17 +85,13 @@
 					
         
 		            if(count == 0){
-		                for(var i = 0;i < spans.length;i++)
-		                {
-							(function(i) {
-								
+		                for(let i = 0;i < spans.length;i++)
+		                {				
 								spans[i].innerText = 'X';
-
 								spans[i].onclick = function(){
-									pics[i].style.display = 'none';
-									spans[i].style.display = 'none';			
-								};					
-							})(i);
+								pics[i].style.display = 'none';
+								spans[i].style.display = 'none';							
+							}
 		                }
 		                clearInterval(time);
 		            }
